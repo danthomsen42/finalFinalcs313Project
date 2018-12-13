@@ -25,9 +25,9 @@ app.get('/', function(request, response) {
 });
  app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
 // Starts the server.
-server.listen(5002, function() {
-  console.log('Starting server on port 5002');
-});
+//server.listen(5002, function() {
+//  console.log('Starting server on port 5002');
+//});
 
 // Add the WebSocket handlers
 io.on('connection', function(socket) {
