@@ -1,12 +1,13 @@
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 5000
+//const express = require('express')
+
 //
 
 // Dependencies
 var express = require('express');
+const path = require('path')
+const PORT = process.env.PORT || 5000
 var http = require('http');
-var path = require('path');
+//var path = require('path');
 var socketIO = require('socket.io');
 var app = express();
 var server = http.Server(app);
