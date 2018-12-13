@@ -1,6 +1,6 @@
-//const express = require('express')
-//const path = require('path')
-//const PORT = process.env.PORT || 5000
+const express = require('express')
+const path = require('path')
+const PORT = process.env.PORT || 5000
 //
 
 // Dependencies
@@ -16,13 +16,14 @@ var io = socketIO(server);
 //  .set('views', path.join(__dirname, 'views'))
 //  .set('view engine', 'ejs')
 //  .get('/', (req, res) => res.render('pages/index'))
-//  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-app.set("port", (process.env.PORT || 5001));
+ 
+//app.set("port", (process.env.PORT || 5001));
 app.use('/static', express.static(__dirname + '/static'));
 // Routing
 app.get('/', function(request, response) {
   response.sendFile(path.join(__dirname, 'index.html'));
 });
+ app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
 // Starts the server.
 server.listen(5002, function() {
   console.log('Starting server on port 5002');
